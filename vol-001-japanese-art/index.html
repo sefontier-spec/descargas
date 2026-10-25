@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descargar Material — Japanese Ukiyo-e: Views of Mount Fuji, Bridges & Waterfalls</title>
+<style>
+:root {
+--bg: #f8fafc;
+--card: #ffffff;
+--text: #0f172a;
+--muted: #64748b;
+--accent: #1e293b;
+--accent-hover: #334155;
+--border: #e2e8f0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+background-color: var(--bg);
+color: var(--text);
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+padding: 24px;
+}
+.card {
+background: var(--card);
+max-width: 480px;
+width: 100%;
+border-radius: 20px;
+padding: 40px 32px;
+box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.07);
+border: 1px solid var(--border);
+text-align: center;
+}
+.icon-box {
+width: 64px;
+height: 64px;
+background: #f1f5f9;
+border-radius: 16px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 24px;
+}
+.icon-box svg {
+width: 32px;
+height: 32px;
+stroke: var(--accent);
+}
+.badge {
+display: inline-block;
+font-size: 12px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.08em;
+color: var(--muted);
+margin-bottom: 8px;
+}
+h1 {
+font-size: 24px;
+font-weight: 700;
+line-height: 1.3;
+margin-bottom: 12px;
+color: var(--text);
+}
+p {
+font-size: 15px;
+line-height: 1.6;
+color: var(--muted);
+margin-bottom: 28px;
+}
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+width: 100%;
+background-color: var(--accent);
+color: #ffffff;
+text-decoration: none;
+font-weight: 600;
+font-size: 16px;
+padding: 16px 24px;
+border-radius: 12px;
+transition: all 0.2s ease;
+box-shadow: 0 4px 12px rgba(30, 41, 59, 0.15);
+}
+.btn:hover {
+background-color: var(--accent-hover);
+transform: translateY(-1px);
+}
+.status {
+margin-top: 20px;
+font-size: 13px;
+color: var(--muted);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+}
+.spinner {
+width: 14px;
+height: 14px;
+border: 2px solid #cbd5e1;
+border-top-color: var(--accent);
+border-radius: 50%;
+animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.footer {
+margin-top: 32px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: #94a3b8;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="icon-box">
+<svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+<path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+</svg>
+</div>
+<span class="badge">Edición Digital en Alta Resolución</span>
+<h1>Japanese Ukiyo-e: Views of Mount Fuji, Bridges & Waterfalls</h1>
+<p>Gracias por adquirir este libro. Tu archivo PDF con las láminas listas para imprimir comenzará a descargarse automáticamente en unos segundos.</p>
+<a href="https://github.com/sefontier-spec/descargas/releases/download/vol-001-japanese-art/vol-001-japanese-art.pdf" class="btn" id="downloadBtn" download>
+Descargar PDF Ahora
+</a>
+<div class="status" id="statusBox">
+<div class="spinner" id="spinner"></div>
+<span id="statusText">Iniciando descarga automática...</span>
+</div>
+<div class="footer">
+Descarga directa y segura • Formato PDF (300 DPI)
+</div>
+</div>
+<script>
+const downloadUrl = "https://github.com/sefontier-spec/descargas/releases/download/vol-001-japanese-art/vol-001-japanese-art.pdf";
+setTimeout(() => {
+window.location.href = downloadUrl;
+document.getElementById("spinner").style.display = "none";
+document.getElementById("statusText").textContent = "Si la descarga no ha comenzado, pulsa el botón superior.";
+}, 1800);
+</script>
+</body>
+</html>
