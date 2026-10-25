@@ -1,0 +1,10 @@
+# Prevent large binaries and archives from consuming GitHub git storage
+*.pdf
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# OS metadata
+.DS_Store
+Thumbs.db
