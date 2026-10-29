@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historic Wildlife & Noble Animals in Classical Art — Official Archival Companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-gradient: radial-gradient(ellipse at 50% 0%, #172033 0%, #0a0e17 100%);
+  --card-bg: rgba(15, 23, 42, 0.72);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-glow: rgba(56, 189, 248, 0.12);
+  --accent-gold: #d4af37;
+  --accent-gold-light: #f3e5ab;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --btn-bg: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  --btn-border: rgba(212, 175, 55, 0.4);
+  --btn-hover: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0a0e17;
+  background-image: var(--bg-gradient);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  overflow-x: hidden;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  max-width: 520px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 44px 36px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px -10px var(--card-glow);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0.95;
+}
+.brand-mark::before, .brand-mark::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold));
+}
+.brand-mark::after {
+  background: linear-gradient(90deg, var(--accent-gold), transparent);
+}
+.icon-container {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px auto;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+.icon-container svg {
+  width: 34px;
+  height: 34px;
+  stroke: var(--accent-gold-light);
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.3));
+}
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+.spec-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.spec-pill {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.spec-pill strong {
+  color: var(--accent-gold-light);
+  font-weight: 600;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  padding: 16px 28px;
+  border-radius: 14px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--accent-gold);
+  transition: transform 0.2s ease;
+}
+.btn:hover {
+  background: var(--btn-hover);
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.btn:hover svg {
+  transform: translateY(2px);
+}
+.progress-container {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.progress-bar-bg {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, var(--accent-gold));
+  border-radius: 999px;
+  transition: width 1.8s linear;
+}
+.status-text {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+.footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="brand-mark">Auvlor · Studio Edition</div>
+  <div class="icon-container">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+    </svg>
+  </div>
+  <h1>Historic Wildlife & Noble Animals in Classical Art</h1>
+  <p class="subtitle">Complimentary archival sample pack in print-ready 16K Master PDF (>1200 DPI resolution).</p>
+  <div class="spec-bar">
+    <span class="spec-pill"><strong>16K Master</strong> >1200 DPI</span>
+    <span class="spec-pill"><strong>Lossless</strong> Quality</span>
+    <span class="spec-pill"><strong>Cloud CDN</strong> Direct</span>
+  </div>
+  <a href="https://github.com/sefontier-spec/descargas/releases/download/vol-007-historic-wildlife-noble/vol-007-historic-wildlife-noble.pdf" class="btn" id="downloadBtn" download>
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+    </svg>
+    Download Archival PDF
+  </a>
+  <div class="progress-container">
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <span class="status-text" id="statusText">Starting automatic download...</span>
+  </div>
+  <div class="footer">
+    Official Archival Companion · No Registration Required
+  </div>
+</div>
+<script>
+const downloadUrl = "https://github.com/sefontier-spec/descargas/releases/download/vol-007-historic-wildlife-noble/vol-007-historic-wildlife-noble.pdf";
+window.addEventListener("DOMContentLoaded", () => {
+  const bar = document.getElementById("progressFill");
+  setTimeout(() => { if (bar) bar.style.width = "100%"; }, 50);
+  setTimeout(() => {
+    window.location.href = downloadUrl;
+    const st = document.getElementById("statusText");
+    if (st) st.textContent = "If the download didn't start automatically, click the button above.";
+  }, 1800);
+});
+</script>
+</body>
+</html>
